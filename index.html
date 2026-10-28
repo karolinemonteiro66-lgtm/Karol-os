@@ -69,7 +69,7 @@ document.addEventListener('submit',e=>{let f=e.target.closest('[data-step-form]'
 
 $('export').onclick=()=>{let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='karol-os-backup-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)};
 // Integração opcional: chave publicável, nunca uma chave secret/service_role.
-const SUPABASE_URL='https://ubsfawogmoclhvutxylq.supabase.co';
+const SUPABASE_URL='https://lbsfawogmoclhvuhxylq.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY='sb_publishable_CK0-uED0ONso4slnM275Yw_fy8lrMMa';
 let sb=null, cloudUser=null, cloudEnabled=false, cloudTimer=null, cloudBusy=false;
 const cloudStatus=(msg)=>{ $('cloudState').textContent=msg; $('status').textContent=msg.length>38?msg.slice(0,38)+'…':msg; };
